@@ -1,0 +1,11 @@
+--- setup.py	2017-12-01 04:40:40.000000000 +0000
++++ setup.py.new	2017-12-14 07:24:13.743785322 +0000
+@@ -198,7 +198,7 @@
+     ext_options['extra_compile_args'] = ['-Wno-unused-parameter',
+                                          '-Wno-unused-function']
+ 
+-cythonize_options = {}
++cythonize_options = {"gdb_debug": True}
+ if os.environ.get('CYTHON_COVERAGE'):
+     cythonize_options['compiler_directives'] = {'linetrace': True}
+     cythonize_options['annotate'] = True
